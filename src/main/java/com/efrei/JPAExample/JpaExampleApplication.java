@@ -75,7 +75,7 @@ public class JpaExampleApplication {
 			repository.save(car2);
 			repository.save(van1);
 
-			System.out.println("-------------------------------");
+		/*	System.out.println("-------------------------------");
 			System.out.println("Vehicules found with findAll():");
 			for (Vehicule vehicule : repository.findAll()) {
 				System.out.println(vehicule.toString());
@@ -83,7 +83,7 @@ public class JpaExampleApplication {
 
 			System.out.println("-------------------------------");
 			System.out.println("Persons associted with a vehicule");
-			Iterable<City> cities = repository.findAll();
+			Iterable<Rent> rents = repository.findAll();
 			City c = cities.iterator().next();
 
 			List<Person> persons = c.getPersons();

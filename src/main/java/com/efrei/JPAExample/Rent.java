@@ -11,6 +11,7 @@ public class Rent {
  private Vehicule vehicule;
  private Person person;
 
+    public Rent(){super();}
     public Rent(Date debut , Date fin){
         super();
         this.beginRent = debut;
@@ -36,4 +37,15 @@ public class Rent {
     @Temporal(TemporalType.DATE)
     public Date getEndRent() { return endRent; }
     public void setEndRent(Date endRent) { this.endRent = endRent; }
+
+    @Override
+    public String toString() {
+        return "Rent{" +
+                "beginRent=" + beginRent +
+                ", endRent=" + endRent +
+                ", idR=" + idR +
+                ", vehicule=" + vehicule +
+                ", person=" + person +
+                '}';
+    }
 }
