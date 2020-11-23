@@ -44,13 +44,13 @@ public class JpaExampleApplication {
 			Date date6 = dateFormat.parse("2020-12-09");
 
 
-			Car car1 = new Car("AA11BB",2);
-			Car car2 = new Car("AA22CC",4);
-			Van van1 = new Van("BB33DD",700);
+			Car car1 = new Car("AAAAAA",2);
+			Car car2 = new Car("BBBBBB",4);
+			Van van1 = new Van("CCCCCC",700);
 
-			Person moha = new Person("Mohammed");
-			Person eri = new Person("Erifai");
-			Person maa = new Person("MAAMIR");
+			Person PERSON1 = new Person("PERSON1");
+			Person PERSON2 = new Person("PERSON2");
+			Person PERSON3 = new Person("PERSON3");
 
 			Rent rent1 = new Rent(date1,date2);
 			Rent rent2 = new Rent(date3,date4);
@@ -58,18 +58,18 @@ public class JpaExampleApplication {
 
 			car1.getRents().add(rent1);
 			rent1.setVehicule(car1);
-			moha.getRents().add(rent1);
-			rent1.setPerson(moha);
+			PERSON1.getRents().add(rent1);
+			rent1.setPerson(PERSON1);
 
 			car2.getRents().add(rent2);
-			eri.getRents().add(rent2);
+			PERSON2.getRents().add(rent2);
 			rent2.setVehicule(car2);
-			rent2.setPerson(eri);
+			rent2.setPerson(PERSON2);
 
 			van1.getRents().add(rent3);
-			maa.getRents().add(rent3);
+			PERSON3.getRents().add(rent3);
 			rent3.setVehicule(van1);
-			rent3.setPerson(maa);
+			rent3.setPerson(PERSON3);
 
 			repository.save(car1);
 			repository.save(car2);
